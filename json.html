@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>jeison y webservice</title>
+
+    </head>
+<body>
+    <div id="information">
+        <p><h1>Consumo de un webservice con un fetch</h1></p>
+        <input type="text" id="nombrej" value="Charge...">
+        <p></p>
+        <input type="text" id="apellidoj" value="Charge...">
+        <p></p>
+        <p><h1>Consumo de un webservice con json y filtro de datos</h1></p>
+        <select name="filtro" id="search">
+            <option value="0">userId</option>
+            <option value="1">id</option>
+            <option value="2">title</option>
+            <option value="3">body</option>
+              
+          </select>
+          <button id="view" value="Mostrar" onclick="mostrar()">Mostrar</button>
+    </div>
+    <div id="xml">
+    </div>
+    <form action="index.html"><button onclick="principal()">Regresar al inicio</button>    </form>
+    </body>
+<script src="webservice.js"></script>
+</html>

@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+ 
+
+<head>
+
+   <title>Página principal</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form name="nameform">
+        <h1>Uso de bootstrap</h1>
+        <h5><p>Favor de llenar todos los campos</p></h5>
+        <h4><p>Nombre:</p></h4>
+        <input type="text" id="name">
+        <h4><p>Apellido Paterno:</p></h4>
+        <input type="text" id="apellidoPa">
+        <h5><p>Apellido Materno:</p></h5>
+        <input type="text" id="apellidoMa">
+    </form>
+    <form name="pooform" action="poo.html">
+        <h5><p>Ejemplo del POO</p></h5>
+        <input type="button" value="ENTER" id="po" onclick="pooFunction()"/>
+    </form>
+
+</body>
+
+<script language="javaScript">
+
+    function pooFunction(){
+        let namelet= document.nameform.name.value;
+        let apellidoPalet= document.nameform.apellidoPa.value;
+        let apellidoMalet= document.nameform.apellidoMa.value;
+        var sinNumeros=/^[a-zA-Z]+$/;
+        if(sinNumeros.test(namelet) && sinNumeros.test(apellidoPalet) && sinNumeros.test(apellidoMalet)){
+            localStorage.setItem("Nombre",namelet)
+            localStorage.setItem("ApellidoPaterno",apellidoPalet)
+            localStorage.setItem("ApellidoMaterno",apellidoMalet)
+            document.pooform.submit();
+        }else{
+            alert("Porfavor, llene todos los campos completos "+namelet+" "+apellidoPalet+" "+apellidoMalet)
+        }
+    }
+
+
+
+</script>
+</html>
